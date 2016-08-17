@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Service worker installation methods</title>
+</head>
+<body>
+  <h1>Service worker installation methods</h1>
+
+  <h2>HTTP Header</h2>
+
+  <p>No extra markup and an installed service worker with just an extra HTTP
+  header:</p>
+
+  <pre><code>Link: &lt;/sw.js&gt;; rel="serviceworker"; scope="/"</code></pre>
+
+  <p>Check the console for a message from the installing service worker
+  and inspect the headers to see the HTTP <code>Link</code> header.</p>
+
+</body>
+</html>

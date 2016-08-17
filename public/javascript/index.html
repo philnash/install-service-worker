@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Service worker installation methods</title>
+</head>
+<body>
+  <h1>Service worker installation methods</h1>
+
+  <p>This small app shows the different ways you can install a service worker.
+  When service workers were first released you needed to use the JavaScript API,
+  but Chrome 54 shipped two new methods, installation via the HTML
+  <code>&lt;link&gt;</code> element or by an HTTP <code>Link</code> header.</p>
+
+  <p>See below for the various methods to install a service worker that is
+  available at <code>/sw.js</code> with a scope of <code>"/"</code>.</p>
+
+  <h2>JavaScript installation</h2>
+
+  <p>The original and best for cross browser compatibility, responding to errors
+  and doing advanced work with a service worker registration, like subscribing
+  to push notifications:</p>
+
+  <pre><code>navigator.serviceWorker.register("/sw.js", { scope: "/" })</code></pre>
+
+  <p>Check the console for a message from the installing service worker and
+  inspect the source of this page to see the code used.</p>
+
+  <script>
+    navigator.serviceWorker.register("/javascript/sw.js", { scope: "/javascript/" });
+  </script>
+
+</body>
+</html>
